@@ -12,5 +12,5 @@ global.Function.prototype.getName = ->
   if @_name && @hasOwnProperty "_name"
     @_name
   else
-    @name || "anonymousFunction"
+    @name ? undefined
 global.Function.prototype.hasName = -> !!((@_name && @hasOwnProperty "_name") || @name)
